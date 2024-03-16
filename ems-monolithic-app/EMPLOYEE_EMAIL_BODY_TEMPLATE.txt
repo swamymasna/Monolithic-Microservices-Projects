@@ -1,0 +1,20 @@
+
+Welcome : {ENAME}
+
+Welcome to EMS Application.,
+
+You have Registered Successfully..! & 
+	Your Registered Details are :
+	
+Employee-Id : {EID},
+Employee-Name : {ENAME},
+Employee-Salary : {ESAL},
+Employee-Address : {EADDR},
+Department-Id : {DEPT_ID}.
+Department-Name : {DEPT_NAME}.
+Department-Code : {DEPT_CODE}.
+Department-Description : {DEPT_DESC}.
+
+Thanks & Regards.,
+CodeBySwamy!
+

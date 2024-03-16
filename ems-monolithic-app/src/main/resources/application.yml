@@ -1,0 +1,65 @@
+
+logging:
+  file:
+    name: F:/LogFiles/ems-app.log
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+server:
+    port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+springdoc:
+  api-docs:
+    path: /api-doc
+        
+ems-app:        
+  messages:
+    save_employee_exception : "Exception Occured While Saving Employee into Database : %s"
+    fetch_all_employees_exception : "Exception Occured While Fetching Employees From Database : %s"
+    employee_not_found_exception : "Employee Not Found With Id : %s"
+    update_employee_exception : "Exception Occured While updating Employee into Database : %s"
+    employee_deletion_succeeded : "Employee Deleted Successfully"
+    employee_deletion_failed : "Failed to Delete Employee"
+    delete_employee_exception : "Exception Occured While Deleting Employee From Database : %s"
+    email_subject : "EMS Registration Details"
+            
+    save_department_exception : "Exception Occured While Saving Department into Database : %s"
+    fetch_all_departments_exception : "Exception Occured While Fetching Departments From Database : %s"
+    department_not_found_exception : "Department Not Found With Id : %s"
+    update_department_exception : "Exception Occured While updating Department into Database : %s"
+    department_deletion_succeeded : "Department Deleted Successfully"
+    department_deletion_failed : "Failed to Delete Department"
+    delete_department_exception : "Exception Occured While Deleting Department From Database : %s"
+        
+    department_not_found_by_code_exception : "Department Not Found With Code : %s"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
