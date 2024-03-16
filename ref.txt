@@ -1,0 +1,44 @@
+
+#1) Save Department Data
+
+POST	http://localhost:8081/api/departments	SEND
+----------------------------------------------------
+{
+  "departmentName": "PROD",
+  "departmentCode": "PROD001",
+  "departmentDescription": "PROD-DESC"
+}
+
+#2) Save Employee Data using Department-Id
+
+POST	http://localhost:8081/api/employees		SEND
+----------------------------------------------------
+{
+  "employeeName": "KING",
+  "employeeSalary": 52000.00,
+  "employeeAddress": "VIZAG",
+  "departmentId": 1
+}
+
+__________________________________________________________
+
+-----------------------------------------------------
+GET  http://localhost:8081/api/employees		SEND
+--------------API-RESPONSE---------------------------
+
+[
+	{
+	"id": 1,
+	"employeeName": "SWAMY",
+	"employeeSalary": 85000,
+	"employeeAddress": "HYDERABAD",
+		"department": {
+		"departmentId": 1,
+		"departmentName": "DEV",
+		"departmentCode": "DEV001",
+		"departmentDescription": "DEV-DESC"
+		}
+	}
+]
+
+
